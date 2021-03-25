@@ -1,0 +1,27 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="..\MRNA\source\EList.cs" Link="test\EList.cs" />
+    <Compile Include="..\MRNA\source\MetadataDetector.cs" Link="test\MetadataDetector.cs" />
+    <Compile Include="..\MRNA\source\MrnaSequenceParser.cs" Link="test\MrnaSequenceParser.cs" />
+    <Compile Include="..\MRNA\source\NoiseCodonDetector.cs" Link="test\NoiseCodonDetector.cs" />
+    <Compile Include="..\MRNA\source\SingleGene.cs" Link="test\SingleGene.cs" />
+    <Compile Include="..\MRNA\source\SingleGeneParser.cs" Link="test\SingleGeneParser.cs" />
+    <Compile Include="..\MRNA\source\StopCodonDetector.cs" Link="test\StopCodonDetector.cs" />
+    <Compile Include="..\MRNA\source\ValidCharacterDetector.cs" Link="test\ValidCharacterDetector.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="NUnit" Version="3.12.0" />
+    <PackageReference Include="NUnit3TestAdapter" Version="3.16.1" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.5.0" />
+    <PackageReference Include="System.Collections.NonGeneric" Version="4.3.0" />
+  </ItemGroup>
+
+</Project>
