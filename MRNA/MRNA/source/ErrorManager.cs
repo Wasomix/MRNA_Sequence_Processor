@@ -24,10 +24,15 @@ namespace MRNA.source
             }
         }
 
+        public bool GetErrorValueOf(ErrorTypes errorType)
+        {
+            return GetErrorValue(errorType);
+        }
+
         private void UpdateErrorType(in SingleGeneParser singleGeneParserHandler)
         {
             UpdateInvalidLengthError(singleGeneParserHandler.GetGeneLength());
-            UpdateStopCodonError(singleGeneParserHandler.GetStopCodonFound());
+            UpdateStopCodonError(!singleGeneParserHandler.GetStopCodonFound());
             UpdateAllCharactersAreInvalid(singleGeneParserHandler.GetIfAllCharactersAreInvalid());
             UpdateNoError(in singleGeneParserHandler);
         }
@@ -51,7 +56,7 @@ namespace MRNA.source
         private void UpdateNoError(in SingleGeneParser singleGeneParserHandler)
         {
             bool geneLengthError = IsGeneLengthInValid(singleGeneParserHandler.GetGeneLength());
-            bool stopCodonError = singleGeneParserHandler.GetStopCodonFound();
+            bool stopCodonError = !singleGeneParserHandler.GetStopCodonFound();
             bool allCharsAreInvalidError = singleGeneParserHandler.GetIfAllCharactersAreInvalid();
             bool anyError = geneLengthError | stopCodonError | allCharsAreInvalidError;
             bool noError = !anyError;
@@ -65,7 +70,7 @@ namespace MRNA.source
 
         private bool IsGeneLengthValid(int geneLength)
         {
-            return (geneLength % 3) == 0;
+            return ((geneLength % 3) == 0)&&(geneLength>0);
         }
 
         private void SetErrorPosition (int errorPosition)

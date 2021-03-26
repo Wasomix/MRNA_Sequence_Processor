@@ -44,6 +44,12 @@ namespace MRNA.source
             return _multipleGenes;
         }
 
+        // This methode is only for unit testing purpose
+        public ErrorManager GetErrorManager()
+        {
+            return _errorManagerHandler;
+        }
+
         private void ReadGenesFromMrnaSequence(string mrnaSequence)
         {
             int numberOfElements = mrnaSequence.Length;
