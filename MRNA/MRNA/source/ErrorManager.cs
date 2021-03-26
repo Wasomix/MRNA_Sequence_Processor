@@ -13,7 +13,7 @@ namespace MRNA.source
             UpdateErrorType(in singleGeneParserHandler);
         }
 
-        private void PrintMessageError()
+        public void PrintMessageError()
         {
             foreach(KeyValuePair<ErrorTypes, bool> errorFound in _errorType)
             {

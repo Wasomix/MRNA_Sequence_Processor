@@ -9,7 +9,7 @@
   <ItemGroup>
     <Compile Include="..\MRNA\source\EList.cs" Link="test\EList.cs" />
     <Compile Include="..\MRNA\source\ErrorInformation.cs" Link="test\ErrorInformation.cs" />
-    <Compile Include="..\MRNA\source\ErrorManger.cs" Link="test\ErrorManger.cs" />
+    <Compile Include="..\MRNA\source\ErrorManager.cs" Link="test\ErrorManager.cs" />
     <Compile Include="..\MRNA\source\MetadataDetector.cs" Link="test\MetadataDetector.cs" />
     <Compile Include="..\MRNA\source\MrnaSequenceParser.cs" Link="test\MrnaSequenceParser.cs" />
     <Compile Include="..\MRNA\source\NoiseCodonDetector.cs" Link="test\NoiseCodonDetector.cs" />
