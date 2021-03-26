@@ -10,6 +10,6 @@ namespace MRNA.source
             InvalidStringLength,
             NoStopCodon,
             NoError
-        }
+        }        
     }
 }

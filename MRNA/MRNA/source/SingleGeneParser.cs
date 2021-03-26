@@ -84,7 +84,7 @@ namespace MRNA.source
             return _amountOfCharactersProcessed;
         }
 
-        public bool GetIfAllCharacterAreInvalid()
+        public bool GetIfAllCharactersAreInvalid()
         {
             return _allCharacterAreInvalid;
         }

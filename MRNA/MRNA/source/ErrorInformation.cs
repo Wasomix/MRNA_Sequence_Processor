@@ -6,33 +6,58 @@ using System.Text;
 
 namespace MRNA.source
 {
-    public class ErrorInformation
+    using ErrorTypes = TypeOfErrors.ErrorTypes;
+
+    public class ErrorInformation//<T1> where T1 : ErrorTypes // TODO: See how to use generic programming
     {
         protected int _errorPosition { set; get; }
-        protected string _errorMessage { set; get; }
-
-        protected Dictionary<TypeOfErrors.ErrorTypes, bool> _errorType;
+        protected Dictionary<ErrorTypes, string> _errorMessage;
+        protected Dictionary<ErrorTypes, bool> _errorType;
 
         protected ErrorInformation()
         {
             _errorPosition = 0;
-            _errorMessage = " ";
-            InitializeErrorTypes();
+            AllocateMemoryAndInitializeErrorMessages();
+            AllocateMemoryAndInitializeErrorTypes();
         }
 
-        private void InitializeErrorTypes()
+        private void AllocateMemoryAndInitializeErrorMessages()
         {
-
+            _errorMessage = new Dictionary<ErrorTypes, string>();
+            _errorMessage.Add(ErrorTypes.InvalidInput, "Error: All characters entered are invalid\n");
+            _errorMessage.Add(ErrorTypes.InvalidStringLength, "Error: Invalid string length\n");
+            _errorMessage.Add(ErrorTypes.NoStopCodon, "Error: No stop codon found\n");
+            _errorMessage.Add(ErrorTypes.NoError, "mRNA sequence processed successfully\n");
         }
 
-        /*protected void SetErrorType(TypeOfErrors.ErrorTypes errorType)
+        private void AllocateMemoryAndInitializeErrorTypes()
         {
-            _errorType = errorType;
+            _errorType = new Dictionary<ErrorTypes, bool>();
+            _errorType.Add(ErrorTypes.InvalidInput, false);
+            _errorType.Add(ErrorTypes.InvalidStringLength, false);
+            _errorType.Add(ErrorTypes.NoStopCodon, false);
+            _errorType.Add(ErrorTypes.NoError, true);
         }
 
-        protected TypeOfErrors.ErrorTypes GetErrorType()
+        protected void SetErrorType(ErrorTypes errorType, bool errorValue)
         {
-            return _errorType;
-        }*/
+            if(_errorType.ContainsKey(errorType))
+            {
+                _errorType[errorType] = errorValue;
+            }
+            
+        }
+
+        protected bool GetErrorValue(ErrorTypes errorType)
+        {
+            bool errorValue = false;
+
+            if (_errorType.ContainsKey(errorType))
+            {
+                errorValue = _errorType[errorType];
+            }
+            
+            return errorValue;
+        }
     }
 }

@@ -38,6 +38,7 @@ namespace MRNA.source
             {
                 ReadGenesFromMrnaSequence(mrnaSequence);
                 UpdateErrorInformation();
+                PrintMessageError();
             }
 
             return _multipleGenes;
@@ -57,6 +58,11 @@ namespace MRNA.source
         private void UpdateErrorInformation()
         {
             _errorManagerHandler.UpdateErrorInformation(in _singleGeneParserHandler);       
+        }
+
+        private void PrintMessageError()
+        {
+            _errorManagerHandler.PrintMessageError();
         }
 
         private void ResetGenesList()
