@@ -38,13 +38,11 @@ namespace MRNA.source
             {
                 ReadGenesFromMrnaSequence(mrnaSequence);
                 UpdateErrorInformation();
-                PrintMessageError();
             }
 
             return _multipleGenes;
         }
 
-        // This methode is only for unit testing purpose
         public ErrorManager GetErrorManager()
         {
             return _errorManagerHandler;
