@@ -8,12 +8,15 @@
 
   <ItemGroup>
     <Compile Include="..\MRNA\source\EList.cs" Link="test\EList.cs" />
+    <Compile Include="..\MRNA\source\ErrorInformation.cs" Link="test\ErrorInformation.cs" />
+    <Compile Include="..\MRNA\source\ErrorManger.cs" Link="test\ErrorManger.cs" />
     <Compile Include="..\MRNA\source\MetadataDetector.cs" Link="test\MetadataDetector.cs" />
     <Compile Include="..\MRNA\source\MrnaSequenceParser.cs" Link="test\MrnaSequenceParser.cs" />
     <Compile Include="..\MRNA\source\NoiseCodonDetector.cs" Link="test\NoiseCodonDetector.cs" />
     <Compile Include="..\MRNA\source\SingleGene.cs" Link="test\SingleGene.cs" />
     <Compile Include="..\MRNA\source\SingleGeneParser.cs" Link="test\SingleGeneParser.cs" />
     <Compile Include="..\MRNA\source\StopCodonDetector.cs" Link="test\StopCodonDetector.cs" />
+    <Compile Include="..\MRNA\source\TypeOfErrors.cs" Link="test\TypeOfErrors.cs" />
     <Compile Include="..\MRNA\source\ValidCharacterDetector.cs" Link="test\ValidCharacterDetector.cs" />
   </ItemGroup>
 

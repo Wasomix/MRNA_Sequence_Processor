@@ -11,3 +11,15 @@ C:\Users\sferrand\Sergio\00_ACTUAL\CSharpProjects\AdcChallenges\mRNA\MRNA\MRNA\o
 C:\Users\sferrand\Sergio\00_ACTUAL\CSharpProjects\AdcChallenges\mRNA\MRNA\MRNA\obj\Debug\netcoreapp3.1\MRNA.pdb
 C:\Users\sferrand\Sergio\00_ACTUAL\CSharpProjects\AdcChallenges\mRNA\MRNA\MRNA\obj\Debug\netcoreapp3.1\MRNA.genruntimeconfig.cache
 C:\Users\sferrand\Sergio\00_ACTUAL\CSharpProjects\AdcChallenges\mRNA\MRNA\MRNA\obj\Debug\netcoreapp3.1\MRNA.csprojAssemblyReference.cache
+C:\Users\sferrand\Sergio\00_ACTUAL\CSharpProjects\AdcChallenges\MRNA_Sequence_Processor\MRNA\MRNA\bin\Debug\netcoreapp3.1\MRNA.exe
+C:\Users\sferrand\Sergio\00_ACTUAL\CSharpProjects\AdcChallenges\MRNA_Sequence_Processor\MRNA\MRNA\bin\Debug\netcoreapp3.1\MRNA.deps.json
+C:\Users\sferrand\Sergio\00_ACTUAL\CSharpProjects\AdcChallenges\MRNA_Sequence_Processor\MRNA\MRNA\bin\Debug\netcoreapp3.1\MRNA.runtimeconfig.json
+C:\Users\sferrand\Sergio\00_ACTUAL\CSharpProjects\AdcChallenges\MRNA_Sequence_Processor\MRNA\MRNA\bin\Debug\netcoreapp3.1\MRNA.runtimeconfig.dev.json
+C:\Users\sferrand\Sergio\00_ACTUAL\CSharpProjects\AdcChallenges\MRNA_Sequence_Processor\MRNA\MRNA\bin\Debug\netcoreapp3.1\MRNA.dll
+C:\Users\sferrand\Sergio\00_ACTUAL\CSharpProjects\AdcChallenges\MRNA_Sequence_Processor\MRNA\MRNA\bin\Debug\netcoreapp3.1\MRNA.pdb
+C:\Users\sferrand\Sergio\00_ACTUAL\CSharpProjects\AdcChallenges\MRNA_Sequence_Processor\MRNA\MRNA\obj\Debug\netcoreapp3.1\MRNA.AssemblyInfoInputs.cache
+C:\Users\sferrand\Sergio\00_ACTUAL\CSharpProjects\AdcChallenges\MRNA_Sequence_Processor\MRNA\MRNA\obj\Debug\netcoreapp3.1\MRNA.AssemblyInfo.cs
+C:\Users\sferrand\Sergio\00_ACTUAL\CSharpProjects\AdcChallenges\MRNA_Sequence_Processor\MRNA\MRNA\obj\Debug\netcoreapp3.1\MRNA.csproj.CoreCompileInputs.cache
+C:\Users\sferrand\Sergio\00_ACTUAL\CSharpProjects\AdcChallenges\MRNA_Sequence_Processor\MRNA\MRNA\obj\Debug\netcoreapp3.1\MRNA.dll
+C:\Users\sferrand\Sergio\00_ACTUAL\CSharpProjects\AdcChallenges\MRNA_Sequence_Processor\MRNA\MRNA\obj\Debug\netcoreapp3.1\MRNA.pdb
+C:\Users\sferrand\Sergio\00_ACTUAL\CSharpProjects\AdcChallenges\MRNA_Sequence_Processor\MRNA\MRNA\obj\Debug\netcoreapp3.1\MRNA.genruntimeconfig.cache

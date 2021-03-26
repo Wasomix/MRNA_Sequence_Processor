@@ -11,7 +11,8 @@ namespace MRNA.source
         private List<SingleGene> _multipleGenes;
         private MetadataDetector _metadataDetectorHandler;
         private NoiseCodonDetector _noiseCodonDetectorHandler;
-        private int _mrnaSequencePosition;
+        private ErrorManager _errorManagerHandler;
+        private int _mrnaSequencePosition;       
 
         public MrnaSequenceParser()
         {
@@ -19,7 +20,8 @@ namespace MRNA.source
             _multipleGenes = new List<SingleGene>();
             _metadataDetectorHandler   = new MetadataDetector();
             _noiseCodonDetectorHandler = new NoiseCodonDetector();
-            ResetMrnaSequencePosition();
+            _errorManagerHandler = new ErrorManager();
+            ResetMrnaSequencePosition();            
         }
 
         private void ResetMrnaSequencePosition()
@@ -35,6 +37,7 @@ namespace MRNA.source
             if (IsNotMetadata(mrnaSequence))
             {
                 ReadGenesFromMrnaSequence(mrnaSequence);
+                UpdateErrorInformation();
             }
 
             return _multipleGenes;
@@ -49,6 +52,11 @@ namespace MRNA.source
                 var singleGene = ResetCodonListGetSingleGeneAndUpdatePositionInMrnaSequence(mrnaSequence.Substring(_mrnaSequencePosition)); // TODO: PUT IT IN SINGLEGENE CLASS
                 AddNewGeneIfStopCodonFound(singleGene);             
             }
+        }
+
+        private void UpdateErrorInformation()
+        {
+            _errorManagerHandler.UpdateErrorInformation(in _singleGeneParserHandler);       
         }
 
         private void ResetGenesList()

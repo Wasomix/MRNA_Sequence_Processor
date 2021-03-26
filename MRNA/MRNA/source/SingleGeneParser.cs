@@ -5,17 +5,21 @@ using System.Collections.Generic;
 
 namespace MRNA.source
 {
-    class SingleGeneParser
+    public class SingleGeneParser
     {
         private const int C_CODON_SIZE = 3;
         private bool _stopCodonFound;
-        private int _amountOfCharactersProcessed;
+        private bool _allCharacterAreInvalid;
+        private int _geneLength;
+        private int _amountOfCharactersProcessed;        
         private SingleGene _singleGene;
         private ValidCharacterDetector _validCharacterDetectorHandler;        
 
         public SingleGeneParser()
         {
-            _stopCodonFound = false;            
+            _stopCodonFound = false;
+            _allCharacterAreInvalid = true;
+            _geneLength = 0;
             _amountOfCharactersProcessed = 0;
             _singleGene = new SingleGene();
             _validCharacterDetectorHandler = new ValidCharacterDetector();
@@ -27,9 +31,9 @@ namespace MRNA.source
             return GetSingleGene(mrnaSequence);
         }
 
-        public int GetNumberOfCharactersProcessed()
+        public int GetGeneLength()
         {
-            return _amountOfCharactersProcessed;
+            return _geneLength;
         }
 
         private SingleGene GetSingleGene(string mrnaSequence)
@@ -44,6 +48,8 @@ namespace MRNA.source
                 if (IsItValidMrnaCharacter(newMrnaCharacter))
                 {
                     strAux.Add(newMrnaCharacter);
+                    _allCharacterAreInvalid = false;
+                    _geneLength++;
 
                     if (DoWeHaveAlreadyOneCodon(strAux))
                     {
@@ -73,9 +79,21 @@ namespace MRNA.source
             return _stopCodonFound;
         }
 
+        public int GetNumberOfCharactersProcessed()
+        {
+            return _amountOfCharactersProcessed;
+        }
+
+        public bool GetIfAllCharacterAreInvalid()
+        {
+            return _allCharacterAreInvalid;
+        }
+
         private void InitializeVariablesBeforeParsing()
         {
             _stopCodonFound = false;
+            _allCharacterAreInvalid = true;
+            _geneLength = 0;
             _amountOfCharactersProcessed = 0;
         }
 
