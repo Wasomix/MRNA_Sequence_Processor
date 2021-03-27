@@ -55,7 +55,27 @@ namespace TestMrna
             List<SingleGene> genesCalculated = _mrnaSequenceParserHandler.ProcessMrnaSequence(singleMrnaSequence);
             TestIfBothAreEqual(genesExpected, genesCalculated);
         }
-        
+
+        [Test]
+        public void TestProcessValidSingleMrnaSequenceWithThreeGenesAndNoiseInFirstGene()
+        {
+            string singleMrnaSequence = "auGgcA aa\nuUAGUAGUGAUAAaaauuugggccckLUaaUaa jcauuga";
+            List<string> codonsGen1 = new List<string> { "auG", "gcA", "aau", "UAG" };
+            SingleGene singleGene1 = new SingleGene(codonsGen1);
+            List<string> codonsGen2 = new List<string> { "aaa", "uuu", "ggg", "ccc", "Uaa" };
+            SingleGene singleGene2 = new SingleGene(codonsGen2);
+            List<string> codonsGen3 = new List<string> { "cau", "uga" };
+            SingleGene singleGene3 = new SingleGene(codonsGen3);
+
+            List<SingleGene> genesExpected = new List<SingleGene>();
+            genesExpected.Add(singleGene1);
+            genesExpected.Add(singleGene2);
+            genesExpected.Add(singleGene3);
+
+            List<SingleGene> genesCalculated = _mrnaSequenceParserHandler.ProcessMrnaSequence(singleMrnaSequence);
+            TestIfBothAreEqual(genesExpected, genesCalculated);
+        }
+
         [Test]
         public void TestProcessInvalidSingleMrnaSequenceWithNoGenes()
         {

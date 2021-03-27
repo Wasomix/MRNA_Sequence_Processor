@@ -6,7 +6,6 @@ namespace MRNA.source
 {
     public static class StopCodonDetector
     {
-        private static List<string> _stopCodonDetector = new List<string> { "UAG", "UGA", "UAA" };
         private static int _stopCodonCounter = 0;
 
         public static void ResetStopCodonCounter()
@@ -29,7 +28,8 @@ namespace MRNA.source
 
         private static bool IsItStopCodon(string stopCodon)
         {
-            return _stopCodonDetector.Contains(stopCodon);
+            var stopCodonTypes = StopCodonTypes.GetStopCodonTypes();
+            return stopCodonTypes.Contains(stopCodon);
         }
 
         private static void IncreaseStopCodonCounter()
