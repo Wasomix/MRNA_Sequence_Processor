@@ -57,7 +57,7 @@ namespace MRNA.source
                         AddNewCodon(singleCodon);
                         strAux.Clear();
 
-                        if (StopCodonDetector.CheckIfItIsStopCodonAndUpdateStopCodonCounter(singleCodon))
+                        if (StopCodonDetector.IsItStopCodon(singleCodon))
                         {
                             _stopCodonFound = true;
                             break;

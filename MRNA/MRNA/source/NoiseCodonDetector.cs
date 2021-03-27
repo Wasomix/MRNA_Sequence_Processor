@@ -20,19 +20,6 @@ namespace MRNA.source
             RemoveGenes(ref multipleGenes);
         }
 
-        public bool CheckIfIsItNoiseCodonAndUpdateNoiseCounter()
-        {
-            bool isNoiseCodon = false;
-
-            if(IsItNoiseCodon())
-            {
-                isNoiseCodon = true;
-                StopCodonDetector.ResetStopCodonCounter();
-            }
-
-            return isNoiseCodon;
-        }
-
         private void DetectWhereThereIsNoise(in List<SingleGene> multipleGenes)
         {
             int currentPosition = 0;
@@ -65,11 +52,6 @@ namespace MRNA.source
                 multipleGenes.RemoveAt(positionGeneToRemove - numberOfGenesRemoved);
                 numberOfGenesRemoved++;
             }
-        }
-
-        private bool IsItNoiseCodon()
-        {
-            return StopCodonDetector.GetStopCodonCounter() > C_NOISE_CODON_CONDITION;
         }
     }
 }

@@ -1,0 +1,12 @@
+C:\Users\sferrand\Sergio\00_ACTUAL\CSharpProjects\AdcChallenges\MRNA_Sequence_Processor\MRNA\MRNA\bin\Release\netcoreapp3.1\MRNA.exe
+C:\Users\sferrand\Sergio\00_ACTUAL\CSharpProjects\AdcChallenges\MRNA_Sequence_Processor\MRNA\MRNA\bin\Release\netcoreapp3.1\MRNA.deps.json
+C:\Users\sferrand\Sergio\00_ACTUAL\CSharpProjects\AdcChallenges\MRNA_Sequence_Processor\MRNA\MRNA\bin\Release\netcoreapp3.1\MRNA.runtimeconfig.json
+C:\Users\sferrand\Sergio\00_ACTUAL\CSharpProjects\AdcChallenges\MRNA_Sequence_Processor\MRNA\MRNA\bin\Release\netcoreapp3.1\MRNA.runtimeconfig.dev.json
+C:\Users\sferrand\Sergio\00_ACTUAL\CSharpProjects\AdcChallenges\MRNA_Sequence_Processor\MRNA\MRNA\bin\Release\netcoreapp3.1\MRNA.dll
+C:\Users\sferrand\Sergio\00_ACTUAL\CSharpProjects\AdcChallenges\MRNA_Sequence_Processor\MRNA\MRNA\bin\Release\netcoreapp3.1\MRNA.pdb
+C:\Users\sferrand\Sergio\00_ACTUAL\CSharpProjects\AdcChallenges\MRNA_Sequence_Processor\MRNA\MRNA\obj\Release\netcoreapp3.1\MRNA.AssemblyInfoInputs.cache
+C:\Users\sferrand\Sergio\00_ACTUAL\CSharpProjects\AdcChallenges\MRNA_Sequence_Processor\MRNA\MRNA\obj\Release\netcoreapp3.1\MRNA.AssemblyInfo.cs
+C:\Users\sferrand\Sergio\00_ACTUAL\CSharpProjects\AdcChallenges\MRNA_Sequence_Processor\MRNA\MRNA\obj\Release\netcoreapp3.1\MRNA.csproj.CoreCompileInputs.cache
+C:\Users\sferrand\Sergio\00_ACTUAL\CSharpProjects\AdcChallenges\MRNA_Sequence_Processor\MRNA\MRNA\obj\Release\netcoreapp3.1\MRNA.dll
+C:\Users\sferrand\Sergio\00_ACTUAL\CSharpProjects\AdcChallenges\MRNA_Sequence_Processor\MRNA\MRNA\obj\Release\netcoreapp3.1\MRNA.pdb
+C:\Users\sferrand\Sergio\00_ACTUAL\CSharpProjects\AdcChallenges\MRNA_Sequence_Processor\MRNA\MRNA\obj\Release\netcoreapp3.1\MRNA.genruntimeconfig.cache
