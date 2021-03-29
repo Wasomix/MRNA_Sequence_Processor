@@ -12,7 +12,7 @@ namespace MRNA.source
         {         
         }
 
-        public List<MrnaGeneAndError> ProcessMrnaSequence(string mrnaSequence)
+        public void ProcessMrnaSequence(string mrnaSequence)
         {
             ResetMrnaGenesAndErrorsList();
             ResetMrnaSequencePosition();
@@ -22,8 +22,6 @@ namespace MRNA.source
                 ReadGenesFromMrnaSequence(mrnaSequence);
 				PrintInformationRelatedWithProcessedMrnaSequence(in mrnaSequence);
             }
-
-            return _mrnaGenesAndErrors;
         }
 
         public ErrorManager GetErrorManager()

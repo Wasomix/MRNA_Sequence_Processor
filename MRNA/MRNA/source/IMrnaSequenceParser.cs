@@ -6,7 +6,6 @@ namespace MRNA.source
 {
     interface IMrnaSequenceParser
     {
-        public List<MrnaGeneAndError> ProcessMrnaSequence(string mrnaSequence);
-        public ErrorManager GetErrorManager();
+        public void ProcessMrnaSequence(string mrnaSequence);
     }
 }
