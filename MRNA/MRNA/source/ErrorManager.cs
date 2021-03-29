@@ -1,9 +1,10 @@
 ﻿// This class is responsible for detecting errors in mRNA
 
+using System;
+using System.Collections.Generic;
+
 namespace MRNA.source
 {
-    using System;
-    using System.Collections.Generic;
     using ErrorTypes = TypeOfErrors.ErrorTypes;
     public class ErrorManager : ErrorInformation
     {

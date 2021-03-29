@@ -10,7 +10,7 @@ namespace MRNA
         {
             Console.WriteLine("Start of program!");
 
-            if(IsThereAnyString(args.Length))
+            //if(IsThereAnyString(args.Length))
             {
                 ProcessMrnaSequence(in args);
             }
@@ -25,48 +25,20 @@ namespace MRNA
 
         private static void ProcessMrnaSequence(in string[] args)
         {
-            int numberOfArguments = args.Length;
+            int numberOfArguments = 2;//args.Length;
             Console.WriteLine("Number of arguments: " + numberOfArguments);
 
             for (int i = 0; i < numberOfArguments; i++)
             {
-                string mrnaSequence = args[i];                
-                MrnaSequenceParser mrnaSequenceParserHandler = new MrnaSequenceParser();
-                List<SingleGene> genes = mrnaSequenceParserHandler.ProcessMrnaSequence(mrnaSequence);
-                PrintMrnaSequence(in mrnaSequence);
-                PrintGenes(in genes);
-                PrintMessageError(in mrnaSequenceParserHandler);
+                string mrnaSequence = args[i];
+                MrnaSequenceParserFactory mrnaFactory = new MrnaSequenceParserFactory();
+                string multiple = "MultipleGenes";
+                IMrnaSequenceParser mrnaSequenceParserHandler = mrnaFactory.GetMrnaSequenceParser(in multiple);
+                List<MrnaGeneAndError> genes = mrnaSequenceParserHandler.ProcessMrnaSequence(mrnaSequence);
+                /*PrintMrnaInformation printHanlder = new PrintMrnaInformation();
+                printHanlder.PrintInformationRelatedWithProcessedMrnaSequence(
+                    in mrnaSequence, in genes, in mrnaSequenceParserHandler.GetErrorManager());*/
             }
-        }
-
-        private static void PrintMrnaSequence(in string mrnaSequence)
-        {
-            Console.WriteLine("Input mRNA sequence: " + mrnaSequence);
-        }
-
-        private static void PrintGenes(in List<SingleGene> genes)
-        {
-            foreach (SingleGene oneGene in genes)
-            {
-                PrintSingleGene(in oneGene);
-            }
-        }
-
-        private static void PrintSingleGene(in SingleGene oneGene)
-        {
-            string gene = "";
-            foreach (string codon in oneGene._multipleCodons)
-            {
-                gene = gene + codon;
-            }
-
-            Console.WriteLine("Gene processed: " + gene);
-        }
-        
-        private static void PrintMessageError(in MrnaSequenceParser mrnaSequenceParserHandler)
-        {
-            ErrorManager errorManager = mrnaSequenceParserHandler.GetErrorManager();
-            errorManager.PrintMessageError();
         }
     }
 }

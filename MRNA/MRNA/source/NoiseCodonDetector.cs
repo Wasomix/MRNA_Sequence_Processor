@@ -14,13 +14,13 @@ namespace MRNA.source
             _positionGenesToRemove = new List<int>();
         }
 
-        public void DetectAndRemoveNoiseFromGenes(ref List<SingleGene> multipleGenes)
+        /*public void DetectAndRemoveNoiseFromGenes(ref List<SingleGene> multipleGenes)
         {
             DetectWhereThereIsNoise(in multipleGenes);
             RemoveGenes(ref multipleGenes);
-        }
+        }*/
 
-        private void DetectWhereThereIsNoise(in List<SingleGene> multipleGenes)
+        /*private void DetectWhereThereIsNoise(in List<SingleGene> multipleGenes)
         {
             int currentPosition = 0;
 
@@ -39,9 +39,27 @@ namespace MRNA.source
                 }
                 currentPosition++;
             }
+        }*/
+
+        public bool IsThereNoiseInGene(in SingleGene singleGene)
+        {
+            bool isThereNoise = false;
+            int numberOfElements = singleGene._multipleCodons.Count;
+
+            if (numberOfElements == C_NOISE_CODON_CONDITION)
+            {
+                var codon = singleGene._multipleCodons[0];
+                var stopCodonTypes = StopCodonTypes.GetStopCodonTypes();
+                if (stopCodonTypes.Contains(codon.ToUpper()))
+                {
+                    isThereNoise = true;
+                }
+            }
+
+            return isThereNoise;
         }
 
-        private void RemoveGenes(ref List<SingleGene> multipleGenes)
+        /*private void RemoveGenes(ref List<SingleGene> multipleGenes)
         {
             int numberOfNoise = _positionGenesToRemove.Count;
             int numberOfGenesRemoved = 0;
@@ -52,6 +70,6 @@ namespace MRNA.source
                 multipleGenes.RemoveAt(positionGeneToRemove - numberOfGenesRemoved);
                 numberOfGenesRemoved++;
             }
-        }
+        }*/
     }
 }
