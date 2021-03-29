@@ -11,12 +11,12 @@ namespace MRNA.source
         public IMrnaSequenceParser GetMrnaSequenceParser(in string MrnaSequenceParserType)
         {
             
-            switch (MrnaSequenceParserType)
+            switch (MrnaSequenceParserType.ToUpper())
             {
-                case "SingleGene":
+                case "SINGLEGENE":
                     _iMrnaSequenceParserHandler = new MrnaSequenceParserSingleGenes();
                     break;
-                case "MultipleGenes":
+                case "MULTIPLEGENES":
                     _iMrnaSequenceParserHandler = new MrnaSequenceParserMultipleGenes();
                     break;
             }
