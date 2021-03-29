@@ -16,6 +16,7 @@
     <Compile Include="..\MRNA\source\SingleGene.cs" Link="test\SingleGene.cs" />
     <Compile Include="..\MRNA\source\SingleGeneParser.cs" Link="test\SingleGeneParser.cs" />
     <Compile Include="..\MRNA\source\StopCodonDetector.cs" Link="test\StopCodonDetector.cs" />
+    <Compile Include="..\MRNA\source\StopCodonTypes.cs" Link="test\StopCodonTypes.cs" />
     <Compile Include="..\MRNA\source\TypeOfErrors.cs" Link="test\TypeOfErrors.cs" />
     <Compile Include="..\MRNA\source\ValidCharacterDetector.cs" Link="test\ValidCharacterDetector.cs" />
   </ItemGroup>

@@ -7,8 +7,7 @@ namespace TestMrna
     {
         [SetUp]
         public void Setup()
-        {
-            StopCodonDetector.ResetStopCodonCounter();
+        {            
         }
 
         [Test]
@@ -16,7 +15,7 @@ namespace TestMrna
         {
             string stopCodon = "UAG";
             bool expectedResult = true;
-            bool calculatedResult = StopCodonDetector.CheckIfItIsStopCodonAndUpdateStopCodonCounter(stopCodon);
+            bool calculatedResult = StopCodonDetector.IsItStopCodon(stopCodon);
             Assert.AreEqual(expectedResult, calculatedResult);
         }
 
@@ -25,7 +24,7 @@ namespace TestMrna
         {
             string stopCodon = "UGA";
             bool expectedResult = true;
-            bool calculatedResult = StopCodonDetector.CheckIfItIsStopCodonAndUpdateStopCodonCounter(stopCodon);
+            bool calculatedResult = StopCodonDetector.IsItStopCodon(stopCodon);
             Assert.AreEqual(expectedResult, calculatedResult);
         }
 
@@ -34,7 +33,7 @@ namespace TestMrna
         {
             string stopCodon = "UAA";
             bool expectedResult = true;
-            bool calculatedResult = StopCodonDetector.CheckIfItIsStopCodonAndUpdateStopCodonCounter(stopCodon);
+            bool calculatedResult = StopCodonDetector.IsItStopCodon(stopCodon);
             Assert.AreEqual(expectedResult, calculatedResult);
         }
 
@@ -43,7 +42,7 @@ namespace TestMrna
         {
             string stopCodon = "UUA";
             bool expectedResult = false;
-            bool calculatedResult = StopCodonDetector.CheckIfItIsStopCodonAndUpdateStopCodonCounter(stopCodon);
+            bool calculatedResult = StopCodonDetector.IsItStopCodon(stopCodon);
             Assert.AreEqual(expectedResult, calculatedResult);
         }
     }

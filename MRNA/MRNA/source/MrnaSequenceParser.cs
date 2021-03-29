@@ -37,6 +37,7 @@ namespace MRNA.source
             if (IsNotMetadata(mrnaSequence))
             {
                 ReadGenesFromMrnaSequence(mrnaSequence);
+                DetectAndRemoveNoiseFromGenes();
                 UpdateErrorInformation();
             }
 
@@ -57,6 +58,11 @@ namespace MRNA.source
                 var singleGene = ResetCodonListGetSingleGeneAndUpdatePositionInMrnaSequence(mrnaSequence.Substring(_mrnaSequencePosition)); // TODO: PUT IT IN SINGLEGENE CLASS
                 AddNewGeneIfStopCodonFound(singleGene);             
             }
+        }
+
+        private void DetectAndRemoveNoiseFromGenes()
+        {
+            _noiseCodonDetectorHandler.DetectAndRemoveNoiseFromGenes(ref _multipleGenes);
         }
 
         private void UpdateErrorInformation()

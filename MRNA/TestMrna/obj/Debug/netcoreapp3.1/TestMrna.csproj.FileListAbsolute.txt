@@ -182,7 +182,6 @@ C:\Users\sferrand\Sergio\00_ACTUAL\CSharpProjects\AdcChallenges\MRNA_Sequence_Pr
 C:\Users\sferrand\Sergio\00_ACTUAL\CSharpProjects\AdcChallenges\MRNA_Sequence_Processor\MRNA\TestMrna\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
 C:\Users\sferrand\Sergio\00_ACTUAL\CSharpProjects\AdcChallenges\MRNA_Sequence_Processor\MRNA\TestMrna\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
 C:\Users\sferrand\Sergio\00_ACTUAL\CSharpProjects\AdcChallenges\MRNA_Sequence_Processor\MRNA\TestMrna\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
-C:\Users\sferrand\Sergio\00_ACTUAL\CSharpProjects\AdcChallenges\MRNA_Sequence_Processor\MRNA\TestMrna\obj\Debug\netcoreapp3.1\TestMrna.csprojAssemblyReference.cache
 C:\Users\sferrand\Sergio\00_ACTUAL\CSharpProjects\AdcChallenges\MRNA_Sequence_Processor\MRNA\TestMrna\obj\Debug\netcoreapp3.1\TestMrna.AssemblyInfoInputs.cache
 C:\Users\sferrand\Sergio\00_ACTUAL\CSharpProjects\AdcChallenges\MRNA_Sequence_Processor\MRNA\TestMrna\obj\Debug\netcoreapp3.1\TestMrna.AssemblyInfo.cs
 C:\Users\sferrand\Sergio\00_ACTUAL\CSharpProjects\AdcChallenges\MRNA_Sequence_Processor\MRNA\TestMrna\obj\Debug\netcoreapp3.1\TestMrna.csproj.CoreCompileInputs.cache
