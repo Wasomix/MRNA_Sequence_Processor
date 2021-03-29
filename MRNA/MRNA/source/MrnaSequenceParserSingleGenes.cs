@@ -12,17 +12,14 @@ namespace MRNA.source
         {
         }
 
-        public List<MrnaGeneAndError> ProcessMrnaSequence(string mrnaSequence)
-        {
-            ResetMrnaGenesAndErrorsList();
+        public void ProcessMrnaSequence(string mrnaSequence)
+        {            
             ResetMrnaSequencePosition();
 
             if (IsNotMetadata(mrnaSequence))
             {
                 ReadGenesFromMrnaSequence(mrnaSequence);
             }
-
-            return _mrnaGenesAndErrors;
         }
 
         public ErrorManager GetErrorManager()
@@ -36,6 +33,7 @@ namespace MRNA.source
 
             while (EndOfMrnaSequenceNotReached(in numberOfElements))
             {
+                ResetMrnaGenesAndErrorsList();
                 var singleGene = ResetCodonListGetSingleGeneAndUpdatePositionInMrnaSequence(mrnaSequence.Substring(_mrnaSequencePosition));
                 if (IsNotNoise(in singleGene))
                 {

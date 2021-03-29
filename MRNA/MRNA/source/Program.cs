@@ -30,14 +30,13 @@ namespace MRNA
 
             for (int i = 0; i < numberOfArguments; i++)
             {
-                string mrnaSequence = args[i];
+                //string mrnaSequence = args[i];
+                string mrnaSequence = "auGgcA aa /nuUAGaaauuugggccckLUaa jcauuga";
+
                 MrnaSequenceParserFactory mrnaFactory = new MrnaSequenceParserFactory();
-                string multiple = "MultipleGenes";
-                IMrnaSequenceParser mrnaSequenceParserHandler = mrnaFactory.GetMrnaSequenceParser(in multiple);
-                List<MrnaGeneAndError> genes = mrnaSequenceParserHandler.ProcessMrnaSequence(mrnaSequence);
-                /*PrintMrnaInformation printHanlder = new PrintMrnaInformation();
-                printHanlder.PrintInformationRelatedWithProcessedMrnaSequence(
-                    in mrnaSequence, in genes, in mrnaSequenceParserHandler.GetErrorManager());*/
+                string typeOfSequencer = "SingleGene"; // "MultipleGenes";
+                IMrnaSequenceParser mrnaSequenceParserHandler = mrnaFactory.GetMrnaSequenceParser(in typeOfSequencer);
+                mrnaSequenceParserHandler.ProcessMrnaSequence(mrnaSequence);
             }
         }
     }

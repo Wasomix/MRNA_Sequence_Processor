@@ -14,7 +14,9 @@
     <Compile Include="..\MRNA\source\MetadataDetector.cs" Link="test\MetadataDetector.cs" />
     <Compile Include="..\MRNA\source\MrnaGeneAndError.cs" Link="test\MrnaGeneAndError.cs" />
     <Compile Include="..\MRNA\source\MrnaSequenceParserBase.cs" Link="test\MrnaSequenceParserBase.cs" />
+    <Compile Include="..\MRNA\source\MrnaSequenceParserFactory.cs" Link="test\MrnaSequenceParserFactory.cs" />
     <Compile Include="..\MRNA\source\MrnaSequenceParserMultipleGenes.cs" Link="test\MrnaSequenceParserMultipleGenes.cs" />
+    <Compile Include="..\MRNA\source\MrnaSequenceParserSingleGenes.cs" Link="test\MrnaSequenceParserSingleGenes.cs" />
     <Compile Include="..\MRNA\source\NoiseCodonDetector.cs" Link="test\NoiseCodonDetector.cs" />
     <Compile Include="..\MRNA\source\PrintMrnaInformation.cs" Link="test\PrintMrnaInformation.cs" />
     <Compile Include="..\MRNA\source\SingleGene.cs" Link="test\SingleGene.cs" />
