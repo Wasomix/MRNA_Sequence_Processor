@@ -5,16 +5,16 @@ namespace TestMrna
 {
     using ErrorManager = MRNA.source.ErrorManager;
     using ErrorTypes = MRNA.source.TypeOfErrors.ErrorTypes;
-    using MrnaSequenceParser = MRNA.source.MrnaSequenceParser;
+    using MrnaSequenceParserMultipleGenes = MRNA.source.MrnaSequenceParserMultipleGenes;
 
 
     public class UnitTestTestErrors
     {
-        private MrnaSequenceParser _mrnaSequenceParserHandler;
+        private MrnaSequenceParserMultipleGenes _mrnaSequenceParserHandler;
 
         public UnitTestTestErrors()
         {
-            _mrnaSequenceParserHandler = new MrnaSequenceParser();
+            _mrnaSequenceParserHandler = new MrnaSequenceParserMultipleGenes();
         }
 
         [SetUp]
