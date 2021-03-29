@@ -6,7 +6,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="source\MrnaSequenceParser\" />
+    <Compile Remove="source\MrnaSequenceParser\**" />
+    <EmbeddedResource Remove="source\MrnaSequenceParser\**" />
+    <None Remove="source\MrnaSequenceParser\**" />
   </ItemGroup>
 
 </Project>

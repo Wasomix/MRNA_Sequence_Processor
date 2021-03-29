@@ -8,36 +8,38 @@ namespace MRNA
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Start of program!");
+            Console.WriteLine("Start of program!");            
 
-            //if(IsThereAnyString(args.Length))
+            for(int i=0; i<args.Length; i++)
             {
-                ProcessMrnaSequence(in args);
+                Console.WriteLine("Argument number " + i + ":" + args[i]);
             }
+
+            /*if(IsThereAnyArgument(args.Length))
+            {
+                ReadEnteredMrnaSequence(in args);                
+            }*/
 
             Console.WriteLine("End of program!");
         }
 
-        private static bool IsThereAnyString(int numberOfArguments)
+        private static bool IsThereAnyArgument(int numberOfArguments)
         {
             return numberOfArguments > 0;
         }
 
-        private static void ProcessMrnaSequence(in string[] args)
+        private static void ReadEnteredMrnaSequence(in string[] args)
         {
-            int numberOfArguments = 2;//args.Length;
-            Console.WriteLine("Number of arguments: " + numberOfArguments);
-
-            for (int i = 0; i < numberOfArguments; i++)
+            ReadMrnaSequenceAndProcessItFactory factory = new ReadMrnaSequenceAndProcessItFactory();
+            IReadMrnaSequenceAndProcessIt iReadMrnaSequeceAndProcessItHandler =
+                                                factory.GetMrnaSequenceAndProcessIt(in args[1]);
+            if(iReadMrnaSequeceAndProcessItHandler != null)
             {
-                //string mrnaSequence = args[i];
-                string mrnaSequence = "auGgcA aa /nuUAGaaauuugggccckLUaa jcauuga";
-
-                MrnaSequenceParserFactory mrnaFactory = new MrnaSequenceParserFactory();
-                string typeOfSequencer = "SingleGene"; // "MultipleGenes";
-                IMrnaSequenceParser mrnaSequenceParserHandler = mrnaFactory.GetMrnaSequenceParser(in typeOfSequencer);
-                mrnaSequenceParserHandler.ProcessMrnaSequence(mrnaSequence);
-            }
+                iReadMrnaSequeceAndProcessItHandler.ReadMrnaSequenceAndProcessIt(in args);
+            } else
+            {
+                Console.WriteLine("Either File or Cmd misspell. Please try again");
+            }           
         }
     }
 }
