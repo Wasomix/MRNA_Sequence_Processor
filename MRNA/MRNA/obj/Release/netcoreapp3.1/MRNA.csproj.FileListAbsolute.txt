@@ -10,3 +10,4 @@ C:\Users\sferrand\Sergio\00_ACTUAL\CSharpProjects\AdcChallenges\MRNA_Sequence_Pr
 C:\Users\sferrand\Sergio\00_ACTUAL\CSharpProjects\AdcChallenges\MRNA_Sequence_Processor\MRNA\MRNA\obj\Release\netcoreapp3.1\MRNA.dll
 C:\Users\sferrand\Sergio\00_ACTUAL\CSharpProjects\AdcChallenges\MRNA_Sequence_Processor\MRNA\MRNA\obj\Release\netcoreapp3.1\MRNA.pdb
 C:\Users\sferrand\Sergio\00_ACTUAL\CSharpProjects\AdcChallenges\MRNA_Sequence_Processor\MRNA\MRNA\obj\Release\netcoreapp3.1\MRNA.genruntimeconfig.cache
+C:\Users\sferrand\Sergio\00_ACTUAL\CSharpProjects\AdcChallenges\MRNA_Sequence_Processor\MRNA\MRNA\obj\Release\netcoreapp3.1\MRNA.csprojAssemblyReference.cache
