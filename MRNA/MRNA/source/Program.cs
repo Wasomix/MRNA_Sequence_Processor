@@ -6,19 +6,15 @@ namespace MRNA
 {
     class Program
     {
+        static private int C_FILE_CMD_ARGUMENT_POSITION = 1;
         static void Main(string[] args)
         {
             Console.WriteLine("Start of program!");            
 
-            for(int i=0; i<args.Length; i++)
-            {
-                Console.WriteLine("Argument number " + i + ":" + args[i]);
-            }
-
-            /*if(IsThereAnyArgument(args.Length))
+            if(IsThereAnyArgument(args.Length))
             {
                 ReadEnteredMrnaSequence(in args);                
-            }*/
+            }
 
             Console.WriteLine("End of program!");
         }
@@ -32,7 +28,7 @@ namespace MRNA
         {
             ReadMrnaSequenceAndProcessItFactory factory = new ReadMrnaSequenceAndProcessItFactory();
             IReadMrnaSequenceAndProcessIt iReadMrnaSequeceAndProcessItHandler =
-                                                factory.GetMrnaSequenceAndProcessIt(in args[1]);
+                  factory.GetMrnaSequenceAndProcessIt(in args[C_FILE_CMD_ARGUMENT_POSITION-1]);
             if(iReadMrnaSequeceAndProcessItHandler != null)
             {
                 iReadMrnaSequeceAndProcessItHandler.ReadMrnaSequenceAndProcessIt(in args);

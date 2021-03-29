@@ -1,10 +1,12 @@
 ﻿using System;
-
+using System.IO;
 
 namespace MRNA.source
 {
     class ReadMrnaSequenceAndProcessItFromFile : ReadMrnaSequenceAndProcessItBase, IReadMrnaSequenceAndProcessIt
     {
+        private const int C_ARGUMENT_POSITION_FOR_PATH_TO_FILE = 3;
+
         public ReadMrnaSequenceAndProcessItFromFile()
         {
 
@@ -12,29 +14,41 @@ namespace MRNA.source
 
         public void ReadMrnaSequenceAndProcessIt(in string[] args)
         {
-            int counter = 0;
-            string line;
-            string pathToFile = @"C:\Users\sferrand\Sergio\00_ACTUAL\CSharpProjects\AdcChallenges\MRNA_Sequence_Processor\MRNA\data\refMrna.fa.modif.txt";
-            //string pathToFile = GetFileNameAndPath(in args);
+            string pathToFile = GetFileNameAndPath(in args);
             SetMrnaSequenceParser(in args);
 
-            System.IO.StreamReader file =
-                new System.IO.StreamReader(pathToFile);
-            while ((line = file.ReadLine()) != null)
+            if(File.Exists(pathToFile))
             {
-                ProcessMrnaSequence(in line);
-
-                counter++;
+                ReadMrnaSequenceFromFileAndProcessIt(in pathToFile);
+            } else
+            {
+                Console.WriteLine("Please enter a correct file name and path");
             }
-
-            file.Close();
         }
 
         private string GetFileNameAndPath(in string [] args)
         {
             string fileNameAndPath = "";
 
+            if (args.Length == C_ARGUMENT_POSITION_FOR_PATH_TO_FILE)
+            {
+                fileNameAndPath = args[C_ARGUMENT_POSITION_FOR_PATH_TO_FILE-1];
+            }
+
             return fileNameAndPath;
+        }
+
+        private void ReadMrnaSequenceFromFileAndProcessIt(in string pathToFile)
+        {
+            string line;
+            System.IO.StreamReader file =
+            new System.IO.StreamReader(pathToFile);
+            while ((line = file.ReadLine()) != null)
+            {
+                ProcessMrnaSequence(in line);
+            }
+
+            file.Close();
         }
     }
 }
