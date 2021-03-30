@@ -38,7 +38,7 @@ namespace TestMrna
             List<SingleGene> genesExpected = new List<SingleGene>();
             genesExpected.Add(singleGene);
             
-            List<MrnaGeneAndError> genesCalculated = _mrnaSequenceParserHandler.ProcessMrnaSequence(singleMrnaSequence);
+            _mrnaSequenceParserHandler.ProcessMrnaSequence(singleMrnaSequence);
 
             //TestIfBothAreEqual(genesExpected, genesCalculated);
             Assert.IsTrue(true); // TODO: REMOVE IT
@@ -60,7 +60,7 @@ namespace TestMrna
             genesExpected.Add(singleGene2);
             genesExpected.Add(singleGene3);
 
-            List<MrnaGeneAndError> genesCalculated = _mrnaSequenceParserHandler.ProcessMrnaSequence(singleMrnaSequence);
+            _mrnaSequenceParserHandler.ProcessMrnaSequence(singleMrnaSequence);
 
             //TestIfBothAreEqual(genesExpected, genesCalculated);
             Assert.IsTrue(true); // TODO: REMOVE IT
@@ -86,7 +86,7 @@ namespace TestMrna
             string single = "SingleGenes";
             IMrnaSequenceParser mrnaSequenceParserHandler = mrnaFactory.GetMrnaSequenceParser(in single);
 
-            List<MrnaGeneAndError> genesCalculated = mrnaSequenceParserHandler.ProcessMrnaSequence(singleMrnaSequence);
+            mrnaSequenceParserHandler.ProcessMrnaSequence(singleMrnaSequence);
 
             //TestIfBothAreEqual(genesExpected, genesCalculated);
             Assert.IsTrue(true); // TODO: REMOVE IT
@@ -110,7 +110,7 @@ namespace TestMrna
 
 
 
-            List<MrnaGeneAndError> genesCalculated = _mrnaSequenceParserHandler.ProcessMrnaSequence(singleMrnaSequence);
+            _mrnaSequenceParserHandler.ProcessMrnaSequence(singleMrnaSequence);
             //TestIfBothAreEqual(genesExpected, genesCalculated);
             Assert.IsTrue(true); // TODO: REMOVE IT
         }
@@ -120,7 +120,7 @@ namespace TestMrna
         {
             string singleMrnaSequence = "--m/!298<";
             List<SingleGene> genesExpected = new List<SingleGene>();
-            List<MrnaGeneAndError> genesCalculated = _mrnaSequenceParserHandler.ProcessMrnaSequence(singleMrnaSequence);
+            _mrnaSequenceParserHandler.ProcessMrnaSequence(singleMrnaSequence);
             //TestIfBothAreEqual(genesExpected, genesCalculated);
             Assert.IsTrue(true); // TODO: REMOVE IT
         }
@@ -130,7 +130,8 @@ namespace TestMrna
         {
             string singleMrnaSequence = "<auGgcA aa\nuUAGaaauuugggccckLUaa jcauuga";
             List<SingleGene> genesExpected = new List<SingleGene>();
-            List<MrnaGeneAndError> genesCalculated = _mrnaSequenceParserHandler.ProcessMrnaSequence(singleMrnaSequence);
+            //List<MrnaGeneAndError> genesCalculated = _mrnaSequenceParserHandler.ProcessMrnaSequence(singleMrnaSequence);
+            _mrnaSequenceParserHandler.ProcessMrnaSequence(singleMrnaSequence);
 
             //CollectionAssert.AreEqual(genesExpected, genesCalculated);
             Assert.IsTrue(true); // TODO: REMOVE IT

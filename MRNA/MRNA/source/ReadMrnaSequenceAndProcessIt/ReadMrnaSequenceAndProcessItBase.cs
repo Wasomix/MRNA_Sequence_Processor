@@ -4,7 +4,7 @@ namespace MRNA.source
 {
     class ReadMrnaSequenceAndProcessItBase
     {
-        private IMrnaSequenceParser _mrnaSequenceParserHandler;
+        private IMrnaSequenceParser _iMrnaSequenceParserHandler;
         private const int C_TYPE_OF_SEQUENCER_ARGUMENT_POSITION = 1;
 
         protected ReadMrnaSequenceAndProcessItBase()
@@ -15,13 +15,13 @@ namespace MRNA.source
         protected void SetMrnaSequenceParser(in string[] args)
         {
             MrnaSequenceParserFactory mrnaFactory = new MrnaSequenceParserFactory();
-            _mrnaSequenceParserHandler = mrnaFactory.GetMrnaSequenceParser(
+            _iMrnaSequenceParserHandler = mrnaFactory.GetMrnaSequenceParser(
                                                 GetTypeOfSequencer(in args));
         }
 
         protected void ProcessMrnaSequence(in string mrnaSequence)
         {
-            _mrnaSequenceParserHandler.ProcessMrnaSequence(mrnaSequence);
+            _iMrnaSequenceParserHandler.ProcessMrnaSequence(mrnaSequence);
         }
 
         private string GetTypeOfSequencer(in string[] args)

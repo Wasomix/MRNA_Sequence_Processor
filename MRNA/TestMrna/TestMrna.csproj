@@ -7,24 +7,24 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Include="..\MRNA\source\EList.cs" Link="test\EList.cs" />
-    <Compile Include="..\MRNA\source\ErrorInformation.cs" Link="test\ErrorInformation.cs" />
-    <Compile Include="..\MRNA\source\ErrorManager.cs" Link="test\ErrorManager.cs" />
-    <Compile Include="..\MRNA\source\IMrnaSequenceParser.cs" Link="test\IMrnaSequenceParser.cs" />
-    <Compile Include="..\MRNA\source\MetadataDetector.cs" Link="test\MetadataDetector.cs" />
-    <Compile Include="..\MRNA\source\MrnaGeneAndError.cs" Link="test\MrnaGeneAndError.cs" />
-    <Compile Include="..\MRNA\source\MrnaSequenceParserBase.cs" Link="test\MrnaSequenceParserBase.cs" />
-    <Compile Include="..\MRNA\source\MrnaSequenceParserFactory.cs" Link="test\MrnaSequenceParserFactory.cs" />
-    <Compile Include="..\MRNA\source\MrnaSequenceParserMultipleGenes.cs" Link="test\MrnaSequenceParserMultipleGenes.cs" />
-    <Compile Include="..\MRNA\source\MrnaSequenceParserSingleGenes.cs" Link="test\MrnaSequenceParserSingleGenes.cs" />
-    <Compile Include="..\MRNA\source\NoiseCodonDetector.cs" Link="test\NoiseCodonDetector.cs" />
-    <Compile Include="..\MRNA\source\PrintMrnaInformation.cs" Link="test\PrintMrnaInformation.cs" />
-    <Compile Include="..\MRNA\source\SingleGene.cs" Link="test\SingleGene.cs" />
-    <Compile Include="..\MRNA\source\SingleGeneParser.cs" Link="test\SingleGeneParser.cs" />
-    <Compile Include="..\MRNA\source\StopCodonDetector.cs" Link="test\StopCodonDetector.cs" />
-    <Compile Include="..\MRNA\source\StopCodonTypes.cs" Link="test\StopCodonTypes.cs" />
-    <Compile Include="..\MRNA\source\TypeOfErrors.cs" Link="test\TypeOfErrors.cs" />
-    <Compile Include="..\MRNA\source\ValidCharacterDetector.cs" Link="test\ValidCharacterDetector.cs" />
+    <Compile Include="..\MRNA\source\Detectors\MetadataDetector.cs" Link="test\MetadataDetector.cs" />
+    <Compile Include="..\MRNA\source\Detectors\NoiseCodonDetector.cs" Link="test\NoiseCodonDetector.cs" />
+    <Compile Include="..\MRNA\source\Detectors\StopCodonDetector.cs" Link="test\StopCodonDetector.cs" />
+    <Compile Include="..\MRNA\source\Detectors\ValidCharacterDetector.cs" Link="test\ValidCharacterDetector.cs" />
+    <Compile Include="..\MRNA\source\Error\ErrorInformation.cs" Link="test\ErrorInformation.cs" />
+    <Compile Include="..\MRNA\source\Error\ErrorManager.cs" Link="test\ErrorManager.cs" />
+    <Compile Include="..\MRNA\source\MrnaSequenceParser\IMrnaSequenceParser.cs" Link="test\IMrnaSequenceParser.cs" />
+    <Compile Include="..\MRNA\source\MrnaSequenceParser\MrnaSequenceParserBase.cs" Link="test\MrnaSequenceParserBase.cs" />
+    <Compile Include="..\MRNA\source\MrnaSequenceParser\MrnaSequenceParserFactory.cs" Link="test\MrnaSequenceParserFactory.cs" />
+    <Compile Include="..\MRNA\source\MrnaSequenceParser\MrnaSequenceParserMultipleGenes.cs" Link="test\MrnaSequenceParserMultipleGenes.cs" />
+    <Compile Include="..\MRNA\source\MrnaSequenceParser\MrnaSequenceParserSingleGenes.cs" Link="test\MrnaSequenceParserSingleGenes.cs" />
+    <Compile Include="..\MRNA\source\SingleGeneParser\SingleGeneParser.cs" Link="test\SingleGeneParser.cs" />
+    <Compile Include="..\MRNA\source\Types\MrnaGeneAndError.cs" Link="test\MrnaGeneAndError.cs" />
+    <Compile Include="..\MRNA\source\Types\SingleGene.cs" Link="test\SingleGene.cs" />
+    <Compile Include="..\MRNA\source\Types\StopCodonTypes.cs" Link="test\StopCodonTypes.cs" />
+    <Compile Include="..\MRNA\source\Types\TypeOfErrors.cs" Link="test\TypeOfErrors.cs" />
+    <Compile Include="..\MRNA\source\Utils\EList.cs" Link="test\EList.cs" />
+    <Compile Include="..\MRNA\source\Utils\PrintMrnaInformation.cs" Link="test\PrintMrnaInformation.cs" />
   </ItemGroup>
 
   <ItemGroup>
